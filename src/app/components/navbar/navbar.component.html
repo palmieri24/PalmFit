@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-sm navbar-light fixed-top shadow" id="neubar">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="active">
+      <img src="../../../assets/palm-tree.png" height="60" alt="Logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            ><i class="bi bi-house-fill me-1"></i>Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['services']"
+            routerLinkActive="active"
+            ><i class="fas fa-spa me-1"></i>Services</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['memberships']"
+            routerLinkActive="active"
+            ><i class="fas fa-address-card me-1"></i>Memberships</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['aboutme']"
+            routerLinkActive="active"
+            ><i class="fas fa-leaf me-1"></i>About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['contacts']"
+            routerLinkActive="active"
+            ><i class="bi bi-stars me-1"></i>Contacts</a
+          >
+        </li>
+        <li *ngIf="userLoggedIn" class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['profile']"
+            routerLinkActive="active"
+            ><i class="bi bi-person-circle me-1"></i>Profile</a
+          >
+        </li>
+
+        <li *ngIf="!userLoggedIn" class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['login']"
+            routerLinkActive="active"
+            >Login</a
+          >
+        </li>
+        <li *ngIf="!userLoggedIn" class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['register']"
+            routerLinkActive="active"
+            >Register</a
+          >
+        </li>
+        <li *ngIf="userLoggedIn" class="nav-item">
+          <a
+            (click)="logout()"
+            class="nav-link mx-2 text-danger"
+            style="font-size: 20px"
+            ><i class="bi bi-box-arrow-right"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
