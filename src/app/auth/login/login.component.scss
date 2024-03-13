@@ -1,137 +1,130 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-main {
-  background: linear-gradient(
-    126deg,
-    rgba(81, 41, 24, 1) 10%,
-    rgba(179, 127, 82, 1) 63%,
-    rgba(240, 215, 185, 1) 29%,
-    rgba(240, 215, 185, 1) 29%,
-    rgba(230, 198, 139, 1) 46%,
-    rgba(179, 127, 82, 1) 63%,
-    rgba(81, 41, 24, 1) 90%
-  );
-  animation: bgcolor 12s ease-in-out infinite;
-  height: 100vh;
-  width: 100%;
-  background-size: 300% 300%;
-}
-@keyframes bgcolor {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-}
 .container {
-  display: flex;
+  background-image: url(https://images.unsplash.com/photo-1512911268383-f74e84ff8496?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: right center;
+  min-height: 100vh;
   max-width: 100%;
-  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
   align-items: center;
-  height: 100vh;
 }
 
 .login-box {
-  position: relative;
-  width: 400px;
-  height: 450px;
-  background-color: transparent;
-  border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  background: white;
+  max-width: 850px;
+  margin: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(15px);
+}
+
+.login-box .image-holder {
+  width: 50%;
+}
+
+.image-holder img {
+  max-width: 100%;
+}
+
+.login-box form {
+  width: 50%;
+  padding-top: 36px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  .login-box form {
+    width: 100%;
+    padding: 40px 0 30px;
+  }
+  .login-box .image-holder {
+    width: 100%;
+  }
+  .login-box button {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .login-box form {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 h1 {
-  font-size: 2em;
-  color: white;
-  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 28px;
+  margin: 0;
 }
 
 .form-group {
+  display: block;
   position: relative;
-  width: 310px;
-  margin: 30px 0;
-  border-bottom: 2px solid white;
 }
 
-.form-group label {
-  position: absolute;
-  top: 20%;
-  left: 5px;
-  transform: translateY(-80%);
-  font-size: 1em;
-  color: white;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.form-group input:focus ~ label,
-.form-group input:focus ~ label {
-  top: -5px;
-}
-
-.form-group input {
-  width: 100%;
-  height: 50px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  color: white;
-  padding: 0 35px 0 5px;
+.form-group input:first-child {
+  margin-right: 25px;
 }
 
 .form-group input:focus {
   box-shadow: none;
 }
 
-.form-group .icon {
-  position: absolute;
-  right: 8px;
-  color: white;
-  font-size: 1.2em;
-  line-height: 57px;
+.form-group input {
+  width: 50%;
 }
 
-.btn {
+.form-control {
+  border: 1px solid #333;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: block;
   width: 100%;
-  height: 40px;
-  background-color: white;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.form-group .icon i::before {
+  display: inline-block;
+  position: absolute;
+  bottom: 9px;
+  right: 0;
+}
+
+.login-box button {
   border: none;
-  outline: none;
-  border-radius: 40px;
+  width: 164px;
+  height: 51px;
+  margin: auto;
+  margin-top: 40px;
   cursor: pointer;
-  font-size: 1em;
-  color: black;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #333;
+  font-size: 15px;
+  color: #fff;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
-.register-link {
-  font-size: 0.9em;
-  color: white;
-  text-align: center;
-  margin: 25px 0 10px;
+.socials span {
+  margin: 20px;
 }
 
-.register-link p a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.register-link p a:hover {
-  text-decoration: underline;
+.socials {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
 }

@@ -1,42 +1,48 @@
 <main>
   <div class="container">
     <div class="login-box">
+      <div class="image-holder">
+        <img src="../../../assets/home16.jpeg" alt="" />
+      </div>
       <form #form="ngForm" (ngSubmit)="login(form)">
         <h1>Login</h1>
         <div class="form-group">
-          <span class="icon"><i class="bi bi-envelope-fill"></i></span
-          ><input
+          <label for="email">Email </label>
+          <input
             type="email"
             id="email"
             name="email"
             class="form-control"
             required
             ngModel
-          />
-          <label for="email">Email </label>
+          /><span class="icon"><i class="bi bi-envelope-fill"></i></span>
         </div>
         <div class="form-group">
-          <span class="icon"><i class="bi bi-lock-fill"></i></span
-          ><input
+          <label for="password">Password </label>
+          <input
             type="password"
             id="password"
             name="password"
             class="form-control"
             required
             ngModel
-          />
-          <label for="password">Password </label>
+          /><span class="icon"><i class="bi bi-lock-fill"></i></span>
         </div>
         <button type="submit" class="btn mt-3" [disabled]="form.invalid">
           Login
         </button>
-        <div class="register-link mt-2">
+        <div class="register-link">
           <p>
             Don't have an account?
             <a [routerLink]="['/register']" routerLinkActive="active"
               >Register</a
             >
           </p>
+        </div>
+        <div class="socials">
+          <span><i class="bi bi-google"></i></span>
+          <span><i class="bi bi-instagram"></i></span>
+          <span><i class="bi bi-facebook"></i></span>
         </div>
       </form>
     </div>
