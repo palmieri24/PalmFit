@@ -17,16 +17,11 @@
   display: flex;
 }
 
-.login-box .image-holder {
-  width: 50%;
-}
-
 .image-holder img {
   max-width: 100%;
 }
 
 .login-box form {
-  width: 50%;
   padding-top: 36px;
   padding-left: 45px;
   padding-right: 45px;
@@ -34,8 +29,8 @@
 
 @media screen and (max-width: 767px) {
   .login-box form {
-    width: 100%;
     padding: 40px 0 30px;
+    width: 100%;
   }
   .login-box .image-holder {
     width: 100%;
@@ -59,7 +54,6 @@ h1 {
   font-weight: bold;
   text-align: center;
   margin-bottom: 28px;
-  margin: 0;
 }
 
 .form-group {
@@ -73,10 +67,47 @@ h1 {
 
 .form-group input:focus {
   box-shadow: none;
+  border: #333 2px solid;
+}
+
+.form-group input:focus ~ label,
+input:valid ~ label {
+  top: 0;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 2px;
+  background: white;
 }
 
 .form-group input {
-  width: 50%;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 1px solid #333;
+  outline: none;
+  font-size: 1em;
+  color: #333;
+  padding: 0 35px 0 5px;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.form-group .icon {
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  color: #333;
+  font-size: 1.2em;
+  line-height: 57px;
 }
 
 .form-control {
@@ -89,13 +120,6 @@ h1 {
   height: 30px;
   padding: 0;
   margin-bottom: 25px;
-}
-
-.form-group .icon i::before {
-  display: inline-block;
-  position: absolute;
-  bottom: 9px;
-  right: 0;
 }
 
 .login-box button {
@@ -117,6 +141,23 @@ h1 {
   transform: perspective(1px) translateZ(0);
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+}
+
+.register-link {
+  font-size: 0.9em;
+  color: #333;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register-link p a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
 }
 
 .socials span {
