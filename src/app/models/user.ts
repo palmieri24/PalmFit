@@ -8,3 +8,11 @@ export interface User {
   role: string;
   avatar: string;
 }
+
+export interface Profile {
+  name: string;
+  lastname: string;
+  age: number;
+  email: string;
+  avatar: string;
+}

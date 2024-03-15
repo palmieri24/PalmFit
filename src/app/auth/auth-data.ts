@@ -1,8 +1,11 @@
 export interface AuthData {
-  accessToken: string;
+  token: string;
   user: {
+    name: any;
+    lastname: string;
+    age: number;
     email: string;
     password: string;
-    role: string;
+    avatar: string;
   };
 }

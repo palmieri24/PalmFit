@@ -37,7 +37,7 @@ export class AuthService {
       return;
     }
     const userData: AuthData = JSON.parse(user);
-    if (this.jwtHelper.isTokenExpired(userData.accessToken)) {
+    if (this.jwtHelper.isTokenExpired(userData.token)) {
       this.router.navigate(['']);
       return;
     }

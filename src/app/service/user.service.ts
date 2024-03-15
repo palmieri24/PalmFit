@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/user';
+import { Profile, User } from '../models/user';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -24,6 +24,10 @@ export class UserService {
     return this.http.get(this.apiURL, { headers });
   }
 
+  getLoggedUser() {
+    return this.http.get<Profile>(`${this.apiURL}/users/me`);
+  }
+
   isAdmin(): Observable<boolean> {
     const token = localStorage.getItem('user');
     let headers = new HttpHeaders();
@@ -32,7 +36,7 @@ export class UserService {
       headers = headers.append('Authorization', `Bearer ${tokenParsed}`);
     }
 
-    return this.http.get<any>(`${this.apiURL}/me`, { headers }).pipe(
+    return this.http.get<any>(`${this.apiURL}/users/me`, { headers }).pipe(
       map((response) => {
         for (let i = 0; i < response.roles.length; i++) {
           const element = response.roles[i].role;

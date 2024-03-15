@@ -14,6 +14,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { AuthService } from './auth/auth.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
