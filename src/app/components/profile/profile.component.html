@@ -1,1 +1,24 @@
-
+<main>
+  <div *ngIf="user" class="container">
+    <div class="box">
+      <div class="card_profile_img">
+        <img src="https://source.unsplash.com/7Sz71zuuW4k" alt="" />
+      </div>
+      <h3>{{ user.name + " " + user.lastname }}</h3>
+      <div class="infos">
+        <h5>Information</h5>
+        <p>Name: {{ user.name }}</p>
+        <p>Lastname: {{ user.lastname }}</p>
+        <p>Age: {{ user.age }}</p>
+        <p>Email: {{ user.email }}</p>
+      </div>
+      <div class="membership">
+        <h5>Membership</h5>
+        <p>
+          You don't have any Membership, find the best one for you in the
+          Membership section!
+        </p>
+      </div>
+    </div>
+  </div>
+</main>

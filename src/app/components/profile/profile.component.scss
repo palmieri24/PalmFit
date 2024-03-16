@@ -1,0 +1,39 @@
+.container {
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(https://images.unsplash.com/photo-1551523713-c1473aa01d9f?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.box {
+  position: relative;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(15px);
+  text-align: center;
+  padding: 30px;
+}
+
+.card_profile_img img {
+  width: 220px;
+  height: 220px;
+  background-color: #868d9b;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+h3 {
+  line-height: 2.2;
+}
