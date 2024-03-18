@@ -15,6 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ServicesComponent } from './components/services/services.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'services', component: ServicesComponent },
   { path: '**', redirectTo: '' },
 ];
 
@@ -39,6 +41,7 @@ const routes: Routes = [
     ProfileComponent,
     EditProfileComponent,
     FooterComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
