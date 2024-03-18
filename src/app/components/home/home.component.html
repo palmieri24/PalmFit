@@ -1,1 +1,247 @@
-
+<div class="container">
+  <header class="section__container header__container">
+    <div class="header__content">
+      <span class="bg__blur"></span>
+      <span class="bg__blur header__blur"></span>
+      <h4>Make your Body Healthy & Fit</h4>
+      <h1><span>Create</span> your better self!</h1>
+      <p>
+        Unleash your potential and embark on a journey towards a stronger,
+        fitter, and more confident you. Sign up for 'Make Your Body Shape' now
+        and witness the incredible transformation your body is capable of!
+      </p>
+      <button class="btn">
+        <a class="start" [routerLink]="['/register']" routerLinkActive="active"
+          >Get Started</a
+        >
+      </button>
+    </div>
+    <div class="header__image">
+      <img src="../../../assets/home2.jpeg" alt="header" />
+    </div>
+  </header>
+  <section class="section__container explore__container">
+    <div class="explore__header">
+      <h2 class="section__header">Do you want a program 100% made for you?</h2>
+    </div>
+    <div class="explore__grid">
+      <div class="explore__card">
+        <span><i class="ri-boxing-fill"></i></span>
+        <h4>Strength</h4>
+        <p>
+          Embrace the essence of strength as we delve into its various
+          dimensions physical, mental, and emotional.
+        </p>
+        <a [routerLink]="['/register']" routerLinkActive="active"
+          >Join Now <i class="ri-arrow-right-line"></i
+        ></a>
+      </div>
+      <div class="explore__card">
+        <span><i class="ri-heart-pulse-fill"></i></span>
+        <h4>Physical Fitness</h4>
+        <p>
+          It encompasses a range of activities that improve health, strength,
+          flexibility, and overall well-being.
+        </p>
+        <a [routerLink]="['/register']" routerLinkActive="active"
+          >Join Now <i class="ri-arrow-right-line"></i
+        ></a>
+      </div>
+      <div class="explore__card">
+        <span><i class="ri-run-line"></i></span>
+        <h4>Fat Lose</h4>
+        <p>
+          Through a combination of workout routines and expert guidance, we'll
+          empower you to reach your goals.
+        </p>
+        <a [routerLink]="['/register']" routerLinkActive="active"
+          >Join Now <i class="ri-arrow-right-line"></i
+        ></a>
+      </div>
+      <div class="explore__card">
+        <span><i class="ri-shopping-basket-fill"></i></span>
+        <h4>Weight Gain</h4>
+        <p>
+          Designed for individuals, our program offers an effective approach to
+          gaining weight in a sustainable manner.
+        </p>
+        <a [routerLink]="['/register']" routerLinkActive="active"
+          >Join Now <i class="ri-arrow-right-line"></i
+        ></a>
+      </div>
+    </div>
+  </section>
+  <section class="section__container class__container">
+    <div class="class__image">
+      <span class="bg__blur"></span>
+      <img src="../../../assets/home1.jpeg" alt="class" class="class__img-1" />
+      <img
+        src="../../../assets/food2.avif"
+        alt="class"
+        class="class__img-2 d-xxl-none"
+      />
+    </div>
+    <div class="class__content nutrition">
+      <h2 class="section__header">Nutritional Advices</h2>
+      <p>
+        Before starting a new diet, contact a specialized doctor to make sure
+        there are no contraindications. The following dietary advice is
+        generally valid but may be contraindicated in the presence of specific
+        pathological conditions.
+      </p>
+      <ul>
+        <li>FLEXIBILITY</li>
+        <li>POSITIVE MINDSET</li>
+        <li>NUTRITIONAL BALANCE</li>
+      </ul>
+    </div>
+  </section>
+  <section class="section__container join__container">
+    <h2 class="section__header">Train wherever you want</h2>
+    <p class="section__subheader">
+      I firmly believe that finding the place that's right for you is a
+      wonderful thing, capable of stimulating the senses and giving a sense of
+      security and serenity. For this reason you will be free to choose your
+      ideal place to spend your training!
+    </p>
+    <div class="join__image">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/5f92e6a8f280936498f67166/1626080871436-ZB5965TLDS1HT2PQE2ZH/Hotel-Weekend-Barefoot-Luxury-16-Tulum-Mexico-Terrace-yoga-sessions.jpeg?format=1500w"
+        alt="Join"
+      />
+      <div class="join__grid">
+        <div class="join__card">
+          <span><i class="ri-user-star-fill"></i></span>
+          <div class="join__card__content">
+            <h4>Gym</h4>
+            <p>Unlock your potential with me.</p>
+          </div>
+        </div>
+        <div class="join__card">
+          <span><i class="ri-vidicon-fill"></i></span>
+          <div class="join__card__content">
+            <h4>Home</h4>
+            <p>Elevate your fitness with practice sessions at home.</p>
+          </div>
+        </div>
+        <div class="join__card">
+          <span><i class="ri-building-line"></i></span>
+          <div class="join__card__content">
+            <h4>Nature</h4>
+            <p>Feel the nature and let be a part of it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section__container price__container">
+    <h2 class="section__header">Pricing Plan</h2>
+    <p class="section__subheader">
+      Pricing plan comes with various membership tiers, each tailored to cater
+      to different preferences and fitness aspirations.
+    </p>
+    <div class="price__grid">
+      <div class="price__card">
+        <div class="price__card__content">
+          <h4>Monthly Plan</h4>
+          <h3>50€</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Smart workout plan
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            At home workouts
+          </p>
+        </div>
+        <a
+          class="btn price__btn"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
+          >Join Now <i class="ri-arrow-right-line"></i
+        ></a>
+      </div>
+      <div class="price__card">
+        <div class="price__card__content">
+          <h4>Three-Month Plan</h4>
+          <h3>120€</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            PRO Gyms
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Smart workout plan
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            At home workouts
+          </p>
+        </div>
+        <a
+          class="btn price__btn"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
+          >Join Now <i class="ri-arrow-right-line"></i
+        ></a>
+      </div>
+      <div class="price__card">
+        <div class="price__card__content">
+          <h4>Annual Plan</h4>
+          <h3>360€</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            ELITE Gyms & Classes
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            PRO Gyms
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Smart workout plan
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            At home workouts
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Personal Training
+          </p>
+        </div>
+        <a
+          class="btn price__btn"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
+          >Join Now <i class="ri-arrow-right-line"></i
+        ></a>
+      </div>
+    </div>
+  </section>
+  <footer
+    class="section__container footer__container d-flex justify-content-center align-items-center"
+  >
+    <span class="bg__blur"></span>
+    <span class="bg__blur footer__blur"></span>
+    <div class="footer__col">
+      <div class="footer__logo">
+        <img src="../../../assets/palm-tree.png" alt="logo" />
+      </div>
+      <p>
+        Take the first step towards a healthier, stronger and incredible
+        adventure!
+      </p>
+      <div class="footer__socials">
+        <a href="https://www.facebook.com"><i class="ri-facebook-fill"></i></a>
+        <a href="https://www.instagram.com"
+          ><i class="ri-instagram-line"></i
+        ></a>
+        <a href="https://twitter.com"><i class="ri-twitter-fill"></i></a>
+      </div>
+    </div>
+  </footer>
+  <div class="footer__bar d-flex align-items-center justify-content-center">
+    Copyright © 2024 PalmFit. All rights reserved.
+  </div>
+</div>
