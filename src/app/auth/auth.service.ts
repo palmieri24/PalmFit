@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { BehaviorSubject, throwError, tap, catchError, Observable } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { UpdateProfile } from '../models/user';
 
 @Injectable({
   providedIn: 'root',
@@ -58,15 +59,6 @@ export class AuthService {
       tap(() => {
         this.router.navigate(['login']), catchError(this.errors);
       })
-    );
-  }
-
-  updateUserInfo(updatedInfo: any, id: number) {
-    return this.http.put(`${this.apiURL}/users/${id}`, updatedInfo).pipe(
-      tap(() => {
-        this.user = { ...updatedInfo };
-      }),
-      catchError(this.errors)
     );
   }
 

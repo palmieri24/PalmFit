@@ -16,3 +16,10 @@ export interface Profile {
   email: string;
   avatar: string;
 }
+
+export interface UpdateProfile {
+  name: string;
+  lastname: string;
+  age: number;
+  email: string;
+}

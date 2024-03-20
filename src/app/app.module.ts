@@ -15,17 +15,22 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { AuthService } from './auth/auth.service';
+import { FooterComponent } from './components/footer/footer.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'editProfile/:id',
+    path: 'edit-profile',
     component: EditProfileComponent,
     canActivate: [AuthGuard],
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'services', component: ServicesComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: '**', redirectTo: '' },
 ];
 
@@ -38,6 +43,9 @@ const routes: Routes = [
     RegisterComponent,
     ProfileComponent,
     EditProfileComponent,
+    FooterComponent,
+    ServicesComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,

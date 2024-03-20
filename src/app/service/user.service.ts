@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Profile, User } from '../models/user';
+import { Profile, UpdateProfile, User } from '../models/user';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, catchError, map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HttpHeaders } from '@angular/common/http';
 
@@ -26,6 +26,10 @@ export class UserService {
 
   getLoggedUser() {
     return this.http.get<Profile>(`${this.apiURL}/users/me`);
+  }
+
+  updateUserInfo(updatedInfo: UpdateProfile) {
+    return this.http.put<any>(`${this.apiURL}/users/updateMe`, updatedInfo);
   }
 
   isAdmin(): Observable<boolean> {

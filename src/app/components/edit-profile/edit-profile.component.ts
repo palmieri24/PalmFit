@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AuthService } from 'src/app/auth/auth.service';
 import { UserService } from 'src/app/service/user.service';
-import { User } from 'src/app/models/user';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Profile } from 'src/app/models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-profile',
@@ -11,5 +10,25 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./edit-profile.component.scss'],
 })
 export class EditProfileComponent implements OnInit {
-  ngOnInit(): void {}
+  user!: Profile;
+
+  constructor(private userSrv: UserService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.getLoggedUser();
+  }
+
+  getLoggedUser() {
+    this.userSrv.getLoggedUser().subscribe((user: Profile) => {
+      this.user = user;
+      console.log(this.user);
+    });
+  }
+
+  updateMe(form: NgForm) {
+    this.userSrv
+      .updateUserInfo(form.value)
+      .subscribe(() => this.getLoggedUser());
+    this.router.navigate(['/profile']);
+  }
 }

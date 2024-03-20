@@ -1,0 +1,54 @@
+<main>
+  <div *ngIf="user" class="container">
+    <div class="login-box row">
+      <form #form="ngForm" (submit)="updateMe(form)" class="col-12 col-sm-6">
+        <h1>Register</h1>
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            required
+            [(ngModel)]="user.name"
+          />
+          <label for="name">Name</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            class="form-control"
+            required
+            [(ngModel)]="user.lastname"
+          />
+          <label for="lastname">Lastname</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            name="age"
+            id="age"
+            class="form-control"
+            required
+            [(ngModel)]="user.age"
+          />
+          <label for="age">Age</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            required
+            [(ngModel)]="user.email"
+          />
+          <label for="email">Email</label>
+        </div>
+        <button>Save</button>
+      </form>
+    </div>
+  </div>
+</main>
