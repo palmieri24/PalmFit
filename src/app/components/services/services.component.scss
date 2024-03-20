@@ -67,6 +67,7 @@ h1 span {
   font-weight: 400;
   font-style: normal;
   -webkit-text-fill-color: #93ce3a;
+  text-shadow: #435626 2px 2px 2px;
 }
 
 .header__content p {
@@ -85,14 +86,22 @@ h1 span {
   border: 20px solid rgb(252, 237, 222);
 }
 
+.services__image img {
+  border-radius: 16px;
+}
+
+.services__header p,
+h4 {
+  color: #512919;
+}
+
+.services__header h2 {
+  color: #512919;
+  font-weight: bold;
+}
+
 @media (width < 900px) {
   .header__container {
     grid-template-columns: repeat(1, 1fr);
   }
-
-  .header__image {
-    grid-area: 1/1/2/2;
-  }
-}
-@media (width < 600px) {
 }
