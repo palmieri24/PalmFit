@@ -1,0 +1,97 @@
+.container {
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: bisque;
+}
+
+h4 {
+  color: #512919;
+}
+
+.section__container {
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1536009190979-329b94ad4d57?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  position: relative;
+  top: 5rem;
+  padding-top: 2rem;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 4px 2px 2px #512919;
+}
+
+.explore__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.explore__card {
+  padding: 1rem;
+  background-color: rgb(242, 209, 168);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.explore__card:hover {
+  border-color: #512919;
+}
+
+.explore__card span {
+  display: inline-block;
+  padding: 2px 9px;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: white;
+  background-color: #512919;
+  border-radius: 5px;
+}
+
+.explore__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #512919;
+}
+
+.explore__card p {
+  margin-bottom: 1rem;
+  color: #512919;
+}
+
+@media (width < 900px) {
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .explore__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (width < 600px) {
+  .explore__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
