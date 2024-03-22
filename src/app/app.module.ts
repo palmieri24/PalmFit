@@ -17,7 +17,8 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { AuthService } from './auth/auth.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { ServicesComponent } from './components/services/services.component';
-import { ContactsComponent } from './contacts/contacts.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'services', component: ServicesComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: 'about-me', component: AboutMeComponent },
   { path: '**', redirectTo: '' },
 ];
 
@@ -46,6 +48,7 @@ const routes: Routes = [
     FooterComponent,
     ServicesComponent,
     ContactsComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
