@@ -79,6 +79,125 @@ h4 {
   color: #512919;
 }
 
+.ask__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.ask__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ask__container h2 {
+  font-weight: 600;
+  color: #512919;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.ask__container hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: #512919;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #512919;
+  border-radius: 50px;
+}
+
+.ask__container textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.form-control:focus {
+  border: 2px solid #512919;
+}
+
+.form-control::placeholder {
+  color: #a9a9a9;
+}
+
+.ask__form button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #512919;
+  cursor: pointer;
+}
+
+.ask__form button:hover {
+  color: #512919;
+  background-color: white;
+  border: #512919 1px solid;
+}
+
+.faq__content {
+  text-align: center;
+  margin-top: 3rem;
+  color: #512919;
+}
+
+.faq__content h1 {
+  margin-bottom: 2rem;
+}
+
+details {
+  background-color: burlywood;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+summary {
+  padding: 0.5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  transition: height 1s ease;
+  font-weight: bold;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after {
+  content: "\002B";
+}
+
+details[open] summary {
+  border-bottom: 3px solid #512919;
+  margin-bottom: 0.5em;
+}
+
+details[open] summary:after {
+  content: "\00D7";
+}
+
+details[open] div {
+  padding: 0.5em 1em;
+}
+
 @media (width < 900px) {
   .header__container {
     grid-template-columns: repeat(1, 1fr);

@@ -23,4 +23,107 @@
       </div>
     </div>
   </section>
+
+  <section class="faq__container">
+    <div class="faq__content">
+      <h1>FAQs</h1>
+      <details>
+        <summary>How can I sign up?</summary>
+        <div>
+          Joining the team is simple! Create your new account by confirming your
+          email and enter all the data to be able to structure your plan. You
+          will receive an email immediately to complete the payment and start
+          the journey! Please note that it will take up to 24 hours to structure
+          the plan.
+        </div>
+      </details>
+      <details>
+        <summary>How will we track the results?</summary>
+        <div>
+          The results will be graphed and used to evaluate progress and how to
+          proceed.
+        </div>
+      </details>
+      <details>
+        <summary>I'm new, is this good for beginners?</summary>
+        <div>
+          The training is entirely tailored to you and your goals. So if you're
+          new to the gym, I'll help you with your personalized program. Choose
+          light weights to start and increase gradually. You will find the video
+          with explanation of each exercise in the sheet. If you have doubts
+          about the executions, send us the video via email, so we can help you!
+        </div>
+      </details>
+      <details>
+        <summary>Will it be the same every month?</summary>
+        <div>
+          No, every month is different. This will involve weight gain, a change
+          in exercises and changes in your eating plan which will be constantly
+          updated.
+        </div>
+      </details>
+      <details>
+        <summary>Can I train from home?</summary>
+        <div>
+          If you wish, we can customize the plan so you can train at home! I
+          advise you to have at least short elastic bands and 2 dumbbells, to be
+          replaced if necessary with 2 bottles of water.
+        </div>
+      </details>
+      <details>
+        <summary>Is the service subscription based?</summary>
+        <div>
+          YES. PalmFit app is a subscription-based app, so you will be
+          automatically charged every month, three months, or twelve months,
+          depending on the subscription you choose. But there are no lock-in
+          contracts, so you can cancel at any time. However, you must cancel 72
+          hours before the end of your subscription to avoid being charged for
+          the next subscription period.
+        </div>
+      </details>
+      <details>
+        <summary>How can I unsubscribe?</summary>
+        <div>
+          To cancel your subscription you must email us at least 3 days notice
+          so that you are not charged again. Please note that when you cancel
+          all plans the previous program will be removed from your account.
+        </div>
+      </details>
+    </div>
+  </section>
+  <section class="ask__container">
+    <form #form="ngForm" class="col-12 col-sm-6 ask__form">
+      <h2>Get In Touch</h2>
+      <hr />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        required
+        placeholder="Name"
+        [(ngModel)]="name"
+      />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        class="form-control"
+        required
+        [(ngModel)]="email"
+      />
+      <textarea
+        name="message"
+        placeholder="Message"
+        class="form-control"
+        cols="30"
+        rows="10"
+        [(ngModel)]="message"
+      ></textarea>
+      <button type="submit" (click)="sendMessage()" class="btn mt-3">
+        Submit
+      </button>
+    </form>
+  </section>
 </div>
