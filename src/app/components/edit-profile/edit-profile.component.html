@@ -1,53 +1,80 @@
 <main>
   <div *ngIf="user" class="container">
-    <div class="login-box row">
-      <form #form="ngForm" (submit)="updateMe(form)" class="col-12 col-sm-6">
+    <div class="box d-flex justify-content-center">
+      <form #form="ngForm" (submit)="updateMe(form)" class="col-6 col-sm-12">
         <h1>Register</h1>
-        <div class="form-group">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            class="form-control"
-            required
-            [(ngModel)]="user.name"
-          />
-          <label for="name">Name</label>
+        <div class="card_profile_img d-flex justify-content-center">
+          <div class="d-flex">
+            <div class="d-flex">
+              <div class="btn btn-outline-success px-4 buttons">
+                <input
+                  #fileInput
+                  type="file"
+                  (change)="onFileSelected($event)"
+                  id="avatar"
+                  accept="image/*"
+                  class="form-control d-none"
+                />
+                <label class="form-label m-1" for="avatar"
+                  >Inserisci immagine profilo</label
+                >
+              </div>
+            </div>
+            <img
+              *ngIf="previewUrl"
+              [src]="previewUrl"
+              alt="Preview Image"
+              class="rounded-5 p-5 pt-0 w-50"
+            />
+          </div>
         </div>
-        <div class="form-group">
-          <input
-            type="text"
-            name="lastname"
-            id="lastname"
-            class="form-control"
-            required
-            [(ngModel)]="user.lastname"
-          />
-          <label for="lastname">Lastname</label>
+        <div class="infos">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              required
+              [(ngModel)]="user.name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              class="form-control"
+              required
+              [(ngModel)]="user.lastname"
+            />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              class="form-control"
+              required
+              [(ngModel)]="user.age"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              required
+              [(ngModel)]="user.email"
+            />
+          </div>
         </div>
-        <div class="form-group">
-          <input
-            type="number"
-            name="age"
-            id="age"
-            class="form-control"
-            required
-            [(ngModel)]="user.age"
-          />
-          <label for="age">Age</label>
-        </div>
-        <div class="form-group">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="form-control"
-            required
-            [(ngModel)]="user.email"
-          />
-          <label for="email">Email</label>
-        </div>
-        <button>Save</button>
+        <button class="start">Save</button>
       </form>
     </div>
   </div>

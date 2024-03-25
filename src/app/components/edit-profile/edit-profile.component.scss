@@ -1,1 +1,65 @@
+.container {
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/dd05a355022715.59733f5945eab.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
 
+.box {
+  position: relative;
+  width: 30vh;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  padding: 30px;
+  -webkit-box-shadow: -2px 0px 37px -5px rgba(66, 68, 90, 1);
+  -moz-box-shadow: -2px 0px 37px -5px rgba(66, 68, 90, 1);
+  box-shadow: -2px 0px 37px -5px rgba(66, 68, 90, 1);
+}
+
+.card_profile_img img {
+  width: 220px;
+  height: 220px;
+  background-color: #868d9b;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+h3 {
+  line-height: 2.2;
+}
+
+h3,
+h5 {
+  color: #512919;
+  font-weight: 700;
+}
+
+.start {
+  margin-top: 15px;
+  padding: 0.5rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background-color: #512919;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start:hover {
+  background-color: white;
+  color: #512919;
+}
