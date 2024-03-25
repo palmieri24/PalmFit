@@ -14,11 +14,13 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
-import { AuthService } from './auth/auth.service';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { MembershipComponent } from './components/membership/membership.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,6 +35,7 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'about-me', component: AboutMeComponent },
+  { path: 'payment', component: PaymentComponent },
   { path: '**', redirectTo: '' },
 ];
 
@@ -49,6 +52,8 @@ const routes: Routes = [
     ServicesComponent,
     ContactsComponent,
     AboutMeComponent,
+    PaymentComponent,
+    MembershipComponent,
   ],
   imports: [
     BrowserModule,

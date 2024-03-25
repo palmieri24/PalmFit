@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Profile, UpdateProfile, User } from '../models/user';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, tap } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HttpHeaders } from '@angular/common/http';
+import { AuthData } from '../auth/auth-data';
 
 @Injectable({
   providedIn: 'root',
@@ -24,12 +25,26 @@ export class UserService {
     return this.http.get(this.apiURL, { headers });
   }
 
+  getUserId(userId: string): Observable<User> {
+    return this.http.get<User>(`${this.apiURL}/users/${userId}`);
+  }
+
   getLoggedUser() {
     return this.http.get<Profile>(`${this.apiURL}/users/me`);
   }
 
   updateUserInfo(updatedInfo: UpdateProfile) {
     return this.http.put<any>(`${this.apiURL}/users/updateMe`, updatedInfo);
+  }
+
+  uploadAvatar(img: FormData): Observable<any> {
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'multipart/form-data');
+    headers.append('Accept', 'application/json');
+    console.log(img);
+    return this.http.post<any>(`${this.apiURL}/users/uploadImg`, img, {
+      headers: headers,
+    });
   }
 
   isAdmin(): Observable<boolean> {

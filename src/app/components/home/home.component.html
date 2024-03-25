@@ -8,7 +8,7 @@
         fitter, and more confident you. Sign up for 'Make Your Body Shape' now
         and witness the incredible transformation your body is capable of!
       </p>
-      <button class="btn">
+      <button *ngIf="!userLoggedIn" class="btn">
         <a class="start" [routerLink]="['/register']" routerLinkActive="active"
           >Get Started</a
         >
@@ -30,7 +30,10 @@
           Embrace the essence of strength as we delve into its various
           dimensions physical, mental, and emotional.
         </p>
-        <a [routerLink]="['/register']" routerLinkActive="active"
+        <a
+          *ngIf="!userLoggedIn"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
           >Join Now <i class="ri-arrow-right-line"></i
         ></a>
       </div>
@@ -41,7 +44,10 @@
           It encompasses a range of activities that improve health, strength,
           flexibility, and overall well-being.
         </p>
-        <a [routerLink]="['/register']" routerLinkActive="active"
+        <a
+          *ngIf="!userLoggedIn"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
           >Join Now <i class="ri-arrow-right-line"></i
         ></a>
       </div>
@@ -52,7 +58,10 @@
           Through a combination of workout routines and expert guidance, we'll
           empower you to reach your goals.
         </p>
-        <a [routerLink]="['/register']" routerLinkActive="active"
+        <a
+          *ngIf="!userLoggedIn"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
           >Join Now <i class="ri-arrow-right-line"></i
         ></a>
       </div>
@@ -63,7 +72,10 @@
           Designed for individuals, our program offers an effective approach to
           gaining weight in a sustainable manner.
         </p>
-        <a [routerLink]="['/register']" routerLinkActive="active"
+        <a
+          *ngIf="!userLoggedIn"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
           >Join Now <i class="ri-arrow-right-line"></i
         ></a>
       </div>
@@ -137,77 +149,74 @@
         <div class="price__card__content">
           <h4>Monthly Plan</h4>
           <h3>50€</h3>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Smart workout plan
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            At home workouts
-          </p>
+          <p><i class="ri-checkbox-circle-line"></i> Smart workout plan</p>
+          <p><i class="ri-checkbox-circle-line"></i> At home workouts</p>
         </div>
         <a
-          class="btn price__btn"
+          *ngIf="!userLoggedIn"
           [routerLink]="['/register']"
           routerLinkActive="active"
+          class="btn price__btn"
           >Join Now <i class="ri-arrow-right-line"></i
         ></a>
+        <button
+          *ngIf="userLoggedIn"
+          [routerLink]="['/payment']"
+          routerLinkActive="active"
+          class="btn price__btn"
+        >
+          Buy Now <i class="ri-arrow-right-line"></i>
+        </button>
       </div>
       <div class="price__card">
         <div class="price__card__content">
           <h4>Three-Month Plan</h4>
-          <h3>120€</h3>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            PRO Gyms
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Smart workout plan
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            At home workouts
-          </p>
+          <h3>€120</h3>
+          <p><i class="ri-checkbox-circle-line"></i> PRO Gym</p>
+          <p><i class="ri-checkbox-circle-line"></i> Smart workout plan</p>
+          <p><i class="ri-checkbox-circle-line"></i> At home workouts</p>
         </div>
         <a
           class="btn price__btn"
+          *ngIf="!userLoggedIn"
           [routerLink]="['/register']"
           routerLinkActive="active"
           >Join Now <i class="ri-arrow-right-line"></i
         ></a>
+        <button
+          *ngIf="userLoggedIn"
+          [routerLink]="['/payment']"
+          routerLinkActive="active"
+          class="btn price__btn"
+        >
+          Buy Now <i class="ri-arrow-right-line"></i>
+        </button>
       </div>
       <div class="price__card">
         <div class="price__card__content">
           <h4>Annual Plan</h4>
           <h3>360€</h3>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            ELITE Gyms & Classes
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            PRO Gyms
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Smart workout plan
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            At home workouts
-          </p>
-          <p>
-            <i class="ri-checkbox-circle-line"></i>
-            Personal Training
-          </p>
+          <p><i class="ri-checkbox-circle-line"></i> ELITE Gyms & Classes</p>
+          <p><i class="ri-checkbox-circle-line"></i> PRO Gyms</p>
+          <p><i class="ri-checkbox-circle-line"></i> Smart workout plan</p>
+          <p><i class="ri-checkbox-circle-line"></i> At home workouts</p>
+          <p><i class="ri-checkbox-circle-line"></i> Personal Training</p>
         </div>
         <a
           class="btn price__btn"
+          *ngIf="!userLoggedIn"
           [routerLink]="['/register']"
           routerLinkActive="active"
           >Join Now <i class="ri-arrow-right-line"></i
         ></a>
+        <button
+          *ngIf="userLoggedIn"
+          [routerLink]="['/payment']"
+          routerLinkActive="active"
+          class="btn price__btn"
+        >
+          Buy Now <i class="ri-arrow-right-line"></i>
+        </button>
       </div>
     </div>
   </section>

@@ -26,9 +26,8 @@ export class EditProfileComponent implements OnInit {
   }
 
   updateMe(form: NgForm) {
-    this.userSrv
-      .updateUserInfo(form.value)
-      .subscribe(() => this.getLoggedUser());
-    this.router.navigate(['/profile']);
+    this.userSrv.updateUserInfo(form.value).subscribe(() => {
+      this.router.navigate(['/profile']);
+    });
   }
 }

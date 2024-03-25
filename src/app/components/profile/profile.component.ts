@@ -34,22 +34,7 @@ export class ProfileComponent implements OnInit {
   private loadUserData() {
     const user = this.userSrv.getLoggedUser().subscribe((user: Profile) => {
       this.user = user;
+      console.log(user);
     });
   }
-
-  //   onSubmit() {
-  //   const formData = this.userForm.value;
-  //   if (this.user) {
-  //     this.authSrv.updateUserInfo(formData, this.user.id).subscribe({
-  //       next: () => console.log('Informazioni utente aggiornate con successo!'),
-  //       error: (err) =>
-  //         console.error(
-  //           "Errore durante l'aggiornamento delle informazioni utente:",
-  //           err
-  //         ),
-  //     });
-  //   } else {
-  //     console.error('Errore: this.user non è definito.');
-  //   }
-  // }
 }
