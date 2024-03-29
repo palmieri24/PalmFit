@@ -1,9 +1,5 @@
 export interface Membership {
-  membershipType: MembershipType;
-  price?: number;
-  start_date: Date;
-  description?: string;
-  user_id: string;
+  membershipType: string;
 }
 
 export enum MembershipType {

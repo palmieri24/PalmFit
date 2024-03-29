@@ -13,14 +13,12 @@
         <p>Age: {{ user.age }}</p>
         <p>Email: {{ user.email }}</p>
       </div>
-      <!-- <div *ngIf="user.">
+      <div *ngIf="user && profileMembership">
         <h3>Abbonamento</h3>
-        <p>Tipo: {{ user.abbonamento.tipo }}</p>
-        <p>Prezzo: {{ user.abbonamento.prezzo }}</p>
-        <p>Descrizione: {{ u.abbonamento.descrizione }}</p>
-        <p>Data di Emissione: {{ utente.abbonamento.dataEmissione }}</p>
-        <p>Data di Scadenza: {{ utente.abbonamento.dataScadenza }}</p>
-      </div> -->
+        <p>Tipo: {{ profileMembership.membershipType }}</p>
+        <p>Data di Emissione: {{ profileMembership.start_date }}</p>
+        <p>Data di Scadenza: {{ profileMembership.exp_date }}</p>
+      </div>
       <button class="start">
         <a
           ><i

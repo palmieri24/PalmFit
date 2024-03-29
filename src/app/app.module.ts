@@ -20,7 +20,8 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { PaymentComponent } from './components/payment/payment.component';
-import { MembershipComponent } from './components/membership/membership.component';
+import { PaymentThreeMonthComponent } from './components/payment-three-month/payment-three-month.component';
+import { PaymentAnnualComponent } from './components/payment-annual/payment-annual.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,6 +37,8 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: 'payment', component: PaymentComponent },
+  { path: 'paymentThreeMonth', component: PaymentThreeMonthComponent },
+  { path: 'paymentAnnual', component: PaymentAnnualComponent },
   { path: '**', redirectTo: '' },
 ];
 
@@ -53,7 +56,8 @@ const routes: Routes = [
     ContactsComponent,
     AboutMeComponent,
     PaymentComponent,
-    MembershipComponent,
+    PaymentThreeMonthComponent,
+    PaymentAnnualComponent,
   ],
   imports: [
     BrowserModule,

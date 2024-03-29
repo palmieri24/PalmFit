@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Profile, UpdateProfile, User } from '../models/user';
+import {
+  Profile,
+  ProfileMembership,
+  UpdateProfile,
+  User,
+} from '../models/user';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, catchError, map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -31,6 +36,10 @@ export class UserService {
 
   getLoggedUser() {
     return this.http.get<Profile>(`${this.apiURL}/users/me`);
+  }
+
+  getProfileMembership() {
+    return this.http.get<ProfileMembership>(`${this.apiURL}/users/myMemb`);
   }
 
   updateUserInfo(updatedInfo: UpdateProfile) {

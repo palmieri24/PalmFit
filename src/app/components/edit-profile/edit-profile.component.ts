@@ -34,24 +34,9 @@ export class EditProfileComponent implements OnInit {
       this.saveAvatar(this.file);
     }
     this.userSrv.updateUserInfo(form.value).subscribe(() => {
+      alert('Profile successfully updated!');
       this.router.navigate(['/profile']);
     });
-  }
-
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    if (file) {
-      this.file = file;
-      this.previewFile(file);
-    }
-  }
-
-  previewFile(file: File) {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      this.previewUrl = reader.result;
-    };
   }
 
   saveAvatar(file: File) {

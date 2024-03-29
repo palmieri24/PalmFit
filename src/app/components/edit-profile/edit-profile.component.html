@@ -2,32 +2,11 @@
   <div *ngIf="user" class="container">
     <div class="box d-flex justify-content-center">
       <form #form="ngForm" (submit)="updateMe(form)" class="col-6 col-sm-12">
-        <h1>Register</h1>
-        <div class="card_profile_img d-flex justify-content-center">
-          <div class="d-flex">
-            <div class="d-flex">
-              <div class="btn btn-outline-success px-4 buttons">
-                <input
-                  #fileInput
-                  type="file"
-                  (change)="onFileSelected($event)"
-                  id="avatar"
-                  accept="image/*"
-                  class="form-control d-none"
-                />
-                <label class="form-label m-1" for="avatar"
-                  >Inserisci immagine profilo</label
-                >
-              </div>
-            </div>
-            <img
-              *ngIf="previewUrl"
-              [src]="previewUrl"
-              alt="Preview Image"
-              class="rounded-5 p-5 pt-0 w-50"
-            />
-          </div>
+        <div class="card_profile_img">
+          <img *ngIf="user.avatar" [src]="user.avatar" alt="" />
+          <img *ngIf="!user.avatar" [src]="user.avatar" alt="Default Image" />
         </div>
+        <h3>{{ user.name + " " + user.lastname }}</h3>
         <div class="infos">
           <div class="form-group">
             <label for="name">Name</label>
