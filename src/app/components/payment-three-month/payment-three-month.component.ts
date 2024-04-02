@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Membership } from 'src/app/models/membership 2';
 import { MembershipService } from 'src/app/service/membership.service';
@@ -8,12 +8,15 @@ import { MembershipService } from 'src/app/service/membership.service';
   templateUrl: './payment-three-month.component.html',
   styleUrls: ['./payment-three-month.component.scss'],
 })
-export class PaymentThreeMonthComponent implements OnInit {
+export class PaymentThreeMonthComponent implements OnInit, AfterViewInit {
   membership: Membership = {
     membershipType: 'THREE_MONTH',
   };
   constructor(private membSrv: MembershipService, private router: Router) {}
 
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
   ngOnInit(): void {}
 
   createMembership() {

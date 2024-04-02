@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/service/user.service';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -9,7 +9,7 @@ import { User, Profile, ProfileMembership } from 'src/app/models/user';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, AfterViewInit {
   userForm!: FormGroup;
   user!: Profile;
   profileMembership!: ProfileMembership;
@@ -19,6 +19,10 @@ export class ProfileComponent implements OnInit {
     private authSrv: AuthService,
     private userSrv: UserService
   ) {}
+
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
 
   ngOnInit(): void {
     this.userForm = this.fb.group({

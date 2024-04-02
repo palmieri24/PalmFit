@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from 'src/app/service/user.service';
 import { Profile } from 'src/app/models/user';
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './edit-profile.component.html',
   styleUrls: ['./edit-profile.component.scss'],
 })
-export class EditProfileComponent implements OnInit {
+export class EditProfileComponent implements OnInit, AfterViewInit {
   user!: Profile;
   avatar: string | undefined;
   @ViewChild('fileInput') fileInput: any;
@@ -17,7 +17,9 @@ export class EditProfileComponent implements OnInit {
   previewUrl: string | ArrayBuffer | null = null;
 
   constructor(private userSrv: UserService, private router: Router) {}
-
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
   ngOnInit(): void {
     this.getLoggedUser();
   }

@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+  styleUrls: ['./services.component.scss'],
 })
-export class ServicesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class ServicesComponent implements OnInit, AfterViewInit {
+  constructor() {}
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
   }
 
+  ngOnInit(): void {}
 }

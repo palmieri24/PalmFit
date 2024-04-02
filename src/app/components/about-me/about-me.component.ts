@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+  styleUrls: ['./about-me.component.scss'],
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent implements OnInit, AfterViewInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
   }
-
+  ngOnInit(): void {}
 }

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -7,13 +7,17 @@ import { environment } from 'src/environments/environment';
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss'],
 })
-export class ContactsComponent implements OnInit {
+export class ContactsComponent implements OnInit, AfterViewInit {
   private apiURL = environment.apiURL;
   name: string = '';
   email: string = '';
   message: string = '';
 
   constructor(private http: HttpClient) {}
+
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
 
   ngOnInit(): void {}
 
@@ -23,6 +27,9 @@ export class ContactsComponent implements OnInit {
       (response) => {
         console.log('Message sent successfully: ', response);
         alert('Message sent successfully');
+        this.name = '';
+        this.email = '';
+        this.message = '';
       },
       (error) => {
         console.error('Error sending message: ', error);
